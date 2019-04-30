@@ -2,8 +2,8 @@ pipeline {
     agent any 
 	
 	 parameters {
-        boolean(defaultValue: "1", description: 'Install Pre Reqs?', name: 'PreRequistes')
-		boolean(defaultValue: "1", description: 'Extract Files?', name: 'ExtractInstallationFiles')
+        booleanParam(defaultValue: "1", description: 'Install Pre Reqs?', name: 'PreRequistes')
+		booleanParam(defaultValue: "1", description: 'Extract Files?', name: 'ExtractInstallationFiles')
         choice(choices: ['DEV', 'TEST', 'PROD'], description: 'Which Server to Deploy to?', name: 'ServerName')
     }
     options {
